@@ -11,7 +11,7 @@
 
         <div class="card-body">
 
-          <h4 class="mb-4 dark-grey-text font-weight-bold"><strong>Types</strong></h4>
+          <h4 class="mb-4 dark-grey-text font-weight-bold"><strong>Tipos</strong></h4>
 
 
           <!-- Info message -->
@@ -34,12 +34,12 @@
 
         <div class="card-body">
 
-          <h4 class="mb-4 dark-grey-text font-weight-bold"><strong>Position</strong></h4>
+          <h4 class="mb-4 dark-grey-text font-weight-bold"><strong>Posição</strong></h4>
 
 
           <div class="mb-4">
 
-            <a class="btn btn-indigo" onclick="toastr.info('Hi! I am info message.', '', {positionClass: 'md-toast-top-left'});">Top
+            <a class="btn btn-indigo" onclick="toastr.info('Hi! Eu sou uma mensagem de informacao.', '', {positionClass: 'md-toast-top-left'});">Top
               left</a>
 
             <a class="btn btn-indigo" onclick="toastr.info('Hi! I am info message.', '', {positionClass: 'md-toast-top-center'});">Top

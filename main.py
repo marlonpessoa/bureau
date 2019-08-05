@@ -1,4 +1,4 @@
-from bottle import route, run, template, error, abort, redirect, request, post, get, response, view, static_file
+from bottle import debug, route, run, template, error, abort, redirect, request, post, get, response, view, static_file
 
 @route('/')
 def index():
@@ -39,15 +39,19 @@ def hello(name='Marlon'):
 def send_static(filename):
     return static_file(filename, root='static/')
 
-# @route('/login')
-# def do_login():
-#     username = request.forms.get('username')
-#     password = request.forms.get('password')
-#     if check_login(username, password):
-#         response.set_cookie("account", username, secret='some-secret-key')
-#         return template("<p>Welcome {{name}}! You are now logged in.</p>", name=username)
-#     else:
-#         return "<p>Login failed.</p>"
+@route('/login')
+def login():
+    return template('login')
+
+@route('/dashboard')
+def dashboard():
+    return template('v-1')
+
+@route('/login2')
+def login2():
+    return template('extended')
+
+
 
 @route('/restricted')
 def restricted_area():
@@ -56,8 +60,6 @@ def restricted_area():
         return template("Hello {{name}}. Welcome back.", name=username)
     else:
         return "You are not logged in. Access denied."
+debug(True)
 
-
-
-
-run(host='localhost', port=8080)
+run(host='localhost', reloader = True,port=8080)

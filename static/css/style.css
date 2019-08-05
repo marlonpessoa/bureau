@@ -1,1 +1,4 @@
-/* Your custom styles */
+
+.fixed-sn main,.hidden-sn main{
+    padding-top: 25.5rem !important;
+}
